@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const { CONFIGURATION } = require('./helpers/constants');
+const { CONFIGURATION, SCRAPING_SITE } = require('./helpers/constants');
 const logger = require('./helpers/logger');
 const scrapeURL = require('./scraper');
 
@@ -11,7 +11,16 @@ const PORT = process.env.PORT || CONFIGURATION.PORT;
 
 (async() => {
     logger.info("Scrapping requested")
-    const data = await scrapeURL("https://www.zaubacorp.com/company-list")
+    const data = await scrapeURL("https://www.zaubacorp.com/company-list", SCRAPING_SITE.SCRAPING_DETAIL_TYPE.COMPANY_URLS)
+    
+    data.map(async(companyURL, ind) => {
+        if (ind > 5) {
+            return 
+        }
+        const dataCompany = await scrapeURL(companyURL , SCRAPING_SITE.SCRAPING_DETAIL_TYPE.COMPANY_WISE_INFO)
+        console.log({dataCompany})
+    })
+
     console.log({data})
 })()
 
