@@ -3,6 +3,14 @@ const CONFIGURATION = {
     LOG_FOLDER_NAME: 'logs'
 }
 
+const SCRAPING_SITE = {
+    TIMEOUTS_IN_MILLISEC: {
+        BASE_LOAD: 5000,
+        NAVIGATION: 7000
+    }
+}
+
 module.exports= {
-    CONFIGURATION
+    CONFIGURATION,
+    SCRAPING_SITE
 }
