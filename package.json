@@ -1,0 +1,25 @@
+{
+  "name": "scraper-fortknight",
+  "version": "1.0.0",
+  "description": "Scrapping Knight ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/new-one-one-one/scraper-fortknight.git"
+  },
+  "keywords": [
+    "Scrapper",
+    "Puppeteer",
+    "Generic",
+    "Crawler"
+  ],
+  "author": "piyushohri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/new-one-one-one/scraper-fortknight/issues"
+  },
+  "homepage": "https://github.com/new-one-one-one/scraper-fortknight#readme"
+}
